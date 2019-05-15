@@ -6,8 +6,10 @@
   <body>
     <% if (typeof user !== 'undefined') { %>
         <span class="login-user"><%= user.name %>さんとしてログインしています</span>
+    <% } else {%>    
+        <a href="/login" class="btn">ログイン</a>
     <% } %>
-      <a href="/login" class="btn">ログイン</a>
+      
       <h2>---------------------------------------------------</h2>
       <h4>会員登録フォーム</h4>
       <form action="/" method="post" class="board-form">

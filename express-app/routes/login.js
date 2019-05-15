@@ -25,7 +25,14 @@ router.post('/', function(req, res, next) {
       // 応用課題1-3
       // クッキーの値をセット
       res.cookie('user_id', userId);
-      res.redirect('/after')
+      
+      // 応用課題1-4
+      // sesseion.urlが'another_after'の場合はそちらにリダイレクト
+      if (req.cookies.url === 'another_after') {
+        res.redirect('/another_after')
+      } else {
+        res.redirect('/after')
+      }
     } else {
       res.render('login', {
         noUser: 'メールアドレスとパスワードが一致するユーザーはいません'
