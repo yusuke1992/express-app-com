@@ -8,8 +8,11 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var after = require('./routes/after');
+var anotherAfter = require('./routes/another_after');
 var login = require('./routes/login');
 var setUser = require('./setUser');
+var setCookie = require('./setCookie');
+
 
 var app = express();
 
@@ -27,13 +30,18 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: {},
+  cookie: {
+    maxAge: 3 * 24 * 60 * 1000,
+    secure: false,
+    // sameSite: 'strict'
+  }
 }));
 
 app.use('/', setUser, indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', login);
 app.use('/after', setUser, after);
+app.use('/another_after', setUser, anotherAfter);
 
 
 // catch 404 and forward to error handler

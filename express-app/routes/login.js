@@ -22,6 +22,9 @@ router.post('/', function(req, res, next) {
     }
     if (userId) {
       req.session.user_id = userId;
+      // 応用課題1-3
+      // クッキーの値をセット
+      res.cookie('user_id', userId);
       res.redirect('/after')
     } else {
       res.render('login', {
