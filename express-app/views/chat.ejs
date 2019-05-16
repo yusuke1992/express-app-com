@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+  </head>
+  <body>
+    <p>チャット</p>
+    <a href="/" class="btn">トップへもどる</a>
+    <ul id="messages"></ul>
+    <form>
+      <input id="input_msg" autocomplete="off" />
+      <button>Send</button>
+    </form>
+    
+
+    <script>
+      var socket = io.connect();
+    </script>
+  </body>
+</html>
