@@ -13,7 +13,7 @@
   - "sequelize-cli": "^5.4.0",
   - "socket.io": "^2.2.0",
 
-- 基本課題　(branch standard-function)　実装完了
+- 基本課題　(branch master)　実装完了
 
 - 応用課題1 (branch advanced-function-1)
   - 応用機能1-1 未実装
