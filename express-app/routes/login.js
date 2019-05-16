@@ -4,19 +4,23 @@ var router = express.Router();
 var models = require("../models");
 
 router.get('/', function(req, res, next) {
-  
+  // ログインした状態でログイン画面にアクセスするとhomeにredirect
+  if (req.session.user_id) {
+    res.redirect('/')
+  } else {
   res.render('login');
+  }
 });
 
 router.post('/', function(req, res, next) {
-  models.User.findAll({
+  models.User.findOne({
     where: {
       email: req.body.email,
       password: req.body.password
     }
   }).then((result) => {
-    if (result.length)  {
-      var userId = result[0].dataValues.id;
+    if (result)  {
+      var userId = result.dataValues.id;
     } else {
       var userId = false;
     }
