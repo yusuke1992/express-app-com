@@ -1,9 +1,17 @@
 # backteck様　採用課題
 
 ### backtech様へ　
-#### お疲れ様です。本日はよろしくお願いいたします。
+##### お疲れ様です。本日はよろしくお願い致します。
+##### 前回お尋ねしたsequelize導入時のエラーも無事解決致しました。
+##### 現在の進捗として下記のようになっております。
 
-#### 現在の進捗として下記のようになっております。
+- 使用middleware version
+  - "node" : "v12.2.0"
+  - "express": "~4.16.1",
+  - "express-session": "^1.16.1",
+  - "sequelize": "^4.8.0",
+  - "sequelize-cli": "^5.4.0",
+  - "socket.io": "^2.2.0",
 
 - 基本課題　(branch standard-function)　実装完了
 
