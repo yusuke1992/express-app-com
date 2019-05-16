@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
       if (req.cookies.url === 'another_after') {
         res.redirect('/another_after')
       } else {
-        res.redirect('/after')
+        res.redirect('/chat')
       }
     } else {
       res.render('login', {
