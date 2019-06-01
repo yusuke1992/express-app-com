@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>ログイン後画面</p>
+    </ul>
+    <% if (typeof user !== 'undefined') { %>
+        <span class="login-user"><%= user.name %>さんとしてログインしています</span>
+    <% } %>
+    <a href="/" class="btn">トップへもどる</a>
+  </body>
+</html>
